@@ -9,9 +9,9 @@ To-Do List for Game Engine and Game Development
    - [x] Render a basic colored quad on the screen.
 
 3. Shaders and reading files.
-   - [ ] Learn the fundamentals of GLSL shaders for rendering.
-   - [ ] Implement a shader loading system.
-   - [ ] Read and load shader source code from external files.
+   - [x] Learn the fundamentals of GLSL shaders for rendering.
+   - [x] Implement a shader loading system.
+   - [x] Read and load shader source code from external files.
 
 4. Input and config.
    - [ ] Handle user input through SDL2.
