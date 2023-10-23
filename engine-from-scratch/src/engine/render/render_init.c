@@ -51,6 +51,44 @@ SDL_Window *render_init_window(u32 width, u32 height)
     return window;
 }
 
+// Function to initialize shaders and projection matrix for rendering
+void render_init_shaders(Render_State_Internal *state)
+{
+    // Create the default shader program
+    state->shader_default = render_shader_create("./shaders/default.vert", "./shaders/default.frag");
+
+    // Create an orthographic projection matrix based on window dimensions
+    mat4x4_ortho(state->projection, 0, global.render.width, 0, global.render.height, -2, 2);
+
+    // Use the default shader program for rendering
+    glUseProgram(state->shader_default);
+
+    // Set the projection matrix uniform in the shader
+    glUniformMatrix4fv(
+        glGetUniformLocation(state->shader_default, "projection"),
+        1,              // Count (1 matrix)
+        GL_FALSE,        // Transpose (no)
+        &state->projection[0][0] // Pointer to the matrix data
+    );
+}
+
+// Function to initialize a color texture
+void render_init_color_texture(u32 *texture)
+{
+    // Generate a texture object
+    glGenTextures(1, texture);
+    // Bind the texture to the GL_TEXTURE_2D target
+    glBindTexture(GL_TEXTURE_2D, *texture);
+
+    // Define a solid white texture (1x1 pixel)
+    u8 solid_white[4] = {255, 255, 255, 255};
+    // Upload the texture data to the GPU
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, solid_white);
+
+    // Unbind the texture
+    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
 // Function to initialize a vertex array object, vertex buffer object, and element buffer object for rendering a quad
 void render_init_quad(u32 *vao, u32 *vbo, u32 *ebo)
 {

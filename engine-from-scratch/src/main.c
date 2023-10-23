@@ -39,7 +39,7 @@ int main(int argc, char **argv[])
         render_quad(
             (vec2){global.render.width * 0.5, global.render.height * 0.5},  // Position
             (vec2){50, 50},                                                // Size
-            (vec4){1, 1, 1, 1}                                            // Color
+            (vec4){0, 1, 0, 1}                                            // Color
         );
 
         // End rendering the frame

@@ -4,16 +4,12 @@
    of the game engine, including rendering information. It ensures a centralized and
    accessible storage for essential game engine components.
 */
-#ifndef GLOBAL_H
-#define GLOBAL_H
+#pragma once
 
 #include "render/render.h"
 
-typedef struct global
-{
-    Render_state render;
+typedef struct global {
+    Render_State render;
 } Global;
 
 extern Global global;
-
-#endif
