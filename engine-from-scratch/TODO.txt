@@ -1,0 +1,74 @@
+To-Do List for Game Engine and Game Development
+
+1. Set up the development environment and install SDL2.
+   - [x] Download and configure the Simple DirectMedia Layer (SDL2) library for graphics and input handling.
+
+2. Learn how to render a quad.
+   - [x] Create a simple window using SDL2.
+   - [x] Initialize OpenGL for rendering.
+   - [x] Render a basic colored quad on the screen.
+
+3. Shaders and reading files.
+   - [ ] Learn the fundamentals of GLSL shaders for rendering.
+   - [ ] Implement a shader loading system.
+   - [ ] Read and load shader source code from external files.
+
+4. Input and config.
+   - [ ] Handle user input through SDL2.
+   - [ ] Create a configuration system to manage user settings and keybindings.
+
+5. Physics: Integration.
+   - [ ] Study and implement numerical integration methods for physics simulation (e.g., Euler, Verlet).
+   - [ ] Create a physics engine framework for handling motion and collisions.
+
+6. Point vs Axis-Aligned Bounding Box (AABB) Collision.
+   - [ ] Develop collision detection algorithms for points and AABBs.
+   - [ ] Handle collision responses and resolutions.
+
+7. AABB vs AABB Collision.
+   - [ ] Extend collision detection to handle collisions between two AABBs.
+   - [ ] Implement collision response algorithms for AABB vs. AABB collisions.
+
+8. Swept AABB Collision.
+   - [ ] Enhance collision detection to account for objects' velocities and swept movements.
+   - [ ] Implement swept AABB collision detection and responses.
+
+9. 2D Collision Response.
+   - [ ] Create a robust collision response system for 2D objects.
+   - [ ] Handle various collision scenarios, including sliding, bouncing, and restitution.
+
+10. Entities and Collision Layers.
+    - [ ] Design an entity-component system for managing game objects and behaviors.
+    - [ ] Implement collision layers and filtering for efficient collision detection.
+
+11. Batch Rendering Sprite Sheets.
+    - [ ] Develop a sprite rendering system for efficiently rendering multiple sprites.
+    - [ ] Support sprite sheets and texture atlases for improved performance.
+
+12. Animated Sprites.
+    - [ ] Implement sprite animation using sprite sheets.
+    - [ ] Create a framework for defining and playing sprite animations.
+
+13. Trigger Events.
+    - [ ] Implement event triggers for in-game events and interactions.
+    - [ ] Set up an event system for handling triggers and responses.
+
+14. Integrating Audio.
+    - [ ] Add audio support to the engine using SDL2 or an audio library.
+    - [ ] Create a sound manager for playing and managing audio assets.
+
+15. Level Setup.
+    - [ ] Build a level editor or data format for defining game levels.
+    - [ ] Load and display game levels within the engine.
+
+16. Spawning Enemies.
+    - [ ] Develop a system for spawning enemy entities.
+    - [ ] Implement enemy behavior and AI.
+
+17. Enraged Enemies.
+    - [ ] Create advanced enemy behaviors, such as enraging and pursuing the player.
+    - [ ] Handle enemy states and transitions.
+
+18. Weapon System.
+    - [ ] Design a weapon and combat system.
+    - [ ] Implement player weaponry, ammunition, and combat mechanics.
